@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+logfile=reports/log/git_most_popular_files.log
+
+test -d reports/log || mkdir -p reports/log
+
+echo 'report: Git most popular files' | tee $logfile
+
+git log --format="% " --numstat . | cut -f 3 | egrep -v '^$' | sort | uniq -c | sort -rn | tee -a $logfile
