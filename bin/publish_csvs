@@ -4,4 +4,4 @@
 
 execution_path=`dirname $0`
 
-find reports/log -name *log | xargs $execution_path/2csv
+find reports/log -name "*.log" | xargs $execution_path/2csv

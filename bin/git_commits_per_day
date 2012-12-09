@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+logfile=reports/log/git_commits_per_day.log
+
+test -d reports/log || mkdir -p reports/log
+
+echo 'report: Git commits per day' | tee $logfile
+
+git log --format='%ad' --date-order | \
+    awk '{print $2" "$3" "$5}' | \
+    uniq -c | sort -rn | tee -a $logfile
