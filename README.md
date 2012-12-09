@@ -1,4 +1,4 @@
-# Code Quality Tools
+# Static Analysis and Profiling Tools
 
 ## Synopsis
 
