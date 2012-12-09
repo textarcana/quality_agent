@@ -1,4 +1,4 @@
-# Static Analysis and Profiling Tools
+# Static Analysis, Monitoring and Profiling Tools
 
 > When I'm programming I'm constantly checking my assumptions. ~ Rasmus Lerdorf
 
