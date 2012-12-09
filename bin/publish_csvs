@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# Perform CSV conversion for all Quality Agent logs in ./reports/log/
+
+execution_path=`dirname $0`
+
+find reports/log -name *log | xargs $execution_path/2csv
