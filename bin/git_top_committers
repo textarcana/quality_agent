@@ -4,6 +4,6 @@ logfile=reports/log/git_top_committers.log
 
 test -d reports/log || mkdir -p reports/log
 
-echo 'report: Git top committers' | tee $logfile
+echo 'commits    author name' | tee $logfile
 
 git log --format=%cn $@ | sort | uniq -c | sort -rn | tee -a $logfile
