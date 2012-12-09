@@ -1,5 +1,7 @@
 # Static Analysis and Profiling Tools
 
+> When I'm programming I'm constantly checking my assumptions. ~ Rasmus Lerdorf
+
 ## Synopsis
 
     cd ~/project
