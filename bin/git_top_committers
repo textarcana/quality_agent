@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
-set -x
 
-git log --format=%cn $@ | sort | uniq -c | sort -rn
+test -d reports/log || mkdir -p reports/log
+
+git log --format=%cn $@ | sort | uniq -c | sort -rn | tee reports/log/git_top_committers.log
+
+# todo: transform the git_top_committers.log to JSON and save in a ./reports directory.
