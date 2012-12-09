@@ -6,4 +6,4 @@ test -d reports/csv || mkdir -p reports/csv
 
 file=$1
 
-perl -lne 'm{^\s+?(\w+)\s+(.*)$} and print qq{$1, $2}' $file > $file.csv && mv $file.csv reports/csv
+perl -lne 'm{^\s*(\S+)\s+(.*)$} and print qq{$1, $2}' $file > $file.csv && mv $file.csv reports/csv
