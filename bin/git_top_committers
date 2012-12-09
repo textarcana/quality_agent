@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -x
+
+git log --format=%cn $@ | sort | uniq -c | sort -rn
